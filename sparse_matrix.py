@@ -9,7 +9,8 @@ with open(path_ratings, 'r') as data_file:
         user_id, movie_id, rating, timestamp = row
         ratings.append([user_id, movie_id, float(rating)])
 
-
+#Shuffle the data
+np.random.shuffle(ratings)
 
 #Sparse Matrix
 def sparse_matrix(data):
